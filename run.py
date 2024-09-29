@@ -1,8 +1,10 @@
-from app import maps
+from app import maps, events
+from app.events import get_events
+from app.maps import count_distance
 
 
 def main():
-    maps.count_distance()
+    print(count_distance)
 
 
 if __name__ == '__main__':
