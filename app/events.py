@@ -45,6 +45,6 @@ def sort_events_by_time(_events):
     return _sorted_events
 
 
-events = load_events_from_txt(events_file_path)
-sorted_events = sort_events_by_time(events)
-print(sorted_events)
+def get_events():
+    events = load_events_from_txt(events_file_path)
+    return sort_events_by_time(events)
