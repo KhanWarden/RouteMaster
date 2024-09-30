@@ -1,0 +1,5 @@
+app/config.py
+app/events.txt
+
+.idea/
+__pycache__/
