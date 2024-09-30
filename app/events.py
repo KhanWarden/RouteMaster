@@ -1,4 +1,4 @@
-""" Events module, which loads events from txt, sorts them by time (in ascending order) and returns in get_events()  """
+""" Events module, which loads events from .txt, sorts them by time (in ascending order) and returns in get_events()"""
 
 from datetime import datetime
 from pathlib import Path
@@ -6,8 +6,8 @@ from pathlib import Path
 project_folder = Path(__file__).parent.parent
 events_file_path = project_folder / 'app' / 'events.txt'
 
-
-fixed_date = datetime(2024, 9, 30)
+""" The date that you need """
+fixed_date = datetime(2024, 10, 5)
 
 
 def time_of_event_start(hour, minute):

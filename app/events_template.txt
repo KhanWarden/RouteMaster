@@ -1,0 +1,5 @@
+# Rename the file to events.txt to use
+EventName or LocationName; Latitude, Longitude; StartTime; EndTime
+EventName or LocationName; Latitude, Longitude; StartTime; EndTime
+...
+EventName or LocationName; Latitude, Longitude; StartTime; EndTime

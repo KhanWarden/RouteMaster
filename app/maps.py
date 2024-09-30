@@ -3,7 +3,7 @@ import googlemaps
 from datetime import timedelta
 from app.config import API_KEY
 from app.events import get_events
-from app.parse_json import get_departure_time_from_data
+from app.parser import get_departure_time_from_data
 
 gmaps = googlemaps.Client(key=API_KEY)
 
