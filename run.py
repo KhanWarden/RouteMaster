@@ -1,10 +1,11 @@
 from app import maps, events
 from app.events import get_events
-from app.maps import count_distance
+from app.maps import make_teams
 
 
 def main():
-    print(count_distance)
+    teams = make_teams()
+    print(teams)
 
 
 if __name__ == '__main__':
