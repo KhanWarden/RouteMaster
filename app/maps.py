@@ -54,6 +54,3 @@ while remaining_events:
         remaining_events.pop(next_game_index)
 
     teams.append(current_team)
-
-    # direction = distance_matrix(gmaps, location1, location2, departure_time=parsed_time, mode='driving',
-    #                             traffic_model="pessimistic")
