@@ -7,6 +7,8 @@ from pathlib import Path
 
 from app.config import API_KEY
 from app.events import get_events
+from app.parse_json import parse_json
+from app.parse_json.parse_json import get_departure_time_from_data
 
 gmaps = googlemaps.Client(key=API_KEY)
 
@@ -34,9 +36,7 @@ while remaining_events:
         min_travel_time = float('inf')
 
         for i, game in enumerate(remaining_events):
-            travel_time = distance_matrix(gmaps, current_location, game['location'], departure_time=formatted_end_time,
-                                          mode='driving', traffic_model='pessimistic')
-            #TODO: GET DURATION IN TRAFFIC AND FORMAT TO DATETIME
+            travel_time = get_departure_time_from_data(gmaps, current_location, game['location'], formatted_end_time)
             if travel_time < min_travel_time:
                 start_time = game['start_time']
                 if (end_time + timedelta(seconds=travel_time)) <= start_time:
