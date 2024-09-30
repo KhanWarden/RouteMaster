@@ -1,5 +1,3 @@
-import json
-import googlemaps
 from googlemaps.distance_matrix import distance_matrix
 
 

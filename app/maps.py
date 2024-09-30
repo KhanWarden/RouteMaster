@@ -1,14 +1,9 @@
 """ Maps module which calculates distance between locations in a pessimistic way """
-
-from datetime import time, datetime, timedelta
 import googlemaps
-from googlemaps.distance_matrix import distance_matrix
-from pathlib import Path
-
+from datetime import timedelta
 from app.config import API_KEY
 from app.events import get_events
-from app.parse_json import parse_json
-from app.parse_json.parse_json import get_departure_time_from_data
+from app.parse_json import get_departure_time_from_data
 
 gmaps = googlemaps.Client(key=API_KEY)
 
