@@ -7,7 +7,7 @@ project_folder = Path(__file__).parent.parent
 events_file_path = project_folder / 'app' / 'events.txt'
 
 """ The date that you need """
-fixed_date = datetime(2024, 10, 5)
+fixed_date = datetime(2024, 10, 6)
 
 
 def time_of_event_start(hour, minute):
