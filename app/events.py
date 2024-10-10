@@ -32,11 +32,6 @@ def load_events_from_txt(filename):
     return _events
 
 
-def sort_events_by_time(_events):
-    _sorted_events = sorted(_events, key=lambda event: event['start_time'])
-    return _sorted_events
-
-
 def get_events():
     events = load_events_from_txt(events_file_path)
-    return sort_events_by_time(events)
+    return sorted(events, key=lambda event: event['start_time'])
