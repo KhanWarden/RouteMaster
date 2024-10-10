@@ -1,5 +1,5 @@
-algorithm/app/config.py
-algorithm/app/events.txt
+backend/algorithm/app/config.py
+backend/algorithm/app/events.txt
 
 .idea/
 __pycache__/
