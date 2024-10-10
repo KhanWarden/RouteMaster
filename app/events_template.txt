@@ -1,4 +1,4 @@
-# Rename the file to events.txt to use
+year, month, day (2020, 01, 01)
 EventName or LocationName; Latitude, Longitude; StartTime; EndTime
 EventName or LocationName; Latitude, Longitude; StartTime; EndTime
 ...

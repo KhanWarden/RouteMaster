@@ -6,22 +6,14 @@ from pathlib import Path
 project_folder = Path(__file__).parent.parent
 events_file_path = project_folder / 'app' / 'events.txt'
 
-""" The date that you need """
-fixed_date = datetime(2024, 10, 6)
-
-
-def time_of_event_start(hour, minute):
-    return fixed_date.replace(hour=hour, minute=minute)
-
-
-def time_of_event_end(hour, minute):
-    return fixed_date.replace(hour=hour, minute=minute)
-
 
 def load_events_from_txt(filename):
     _events = []
     try:
         with open(filename, 'r') as file:
+            year, month, day = map(int, file.readline().strip().split(','))
+            fixed_date = datetime(year, month, day)
+
             for line in file:
                 name, location, start_time, end_time = line.strip().split(';')
                 lat, lng = map(float, location.split(','))
@@ -31,8 +23,8 @@ def load_events_from_txt(filename):
                 _event = {
                     'name': name.strip(),
                     'location': (lat, lng),
-                    'start_time': time_of_event_start(start_hours, start_minutes),
-                    'end_time': time_of_event_end(end_hours, end_minutes)
+                    'start_time': fixed_date.replace(hour=start_hours, minute=start_minutes),
+                    'end_time': fixed_date.replace(hour=end_hours, minute=end_minutes)
                 }
                 _events.append(_event)
     except FileNotFoundError:
